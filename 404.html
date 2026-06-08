@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.2), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(120, 80, 255, 0.2), transparent 28%),
+        #040716;
+      color: #eaf7ff;
+      font-family: Arial, "Hiragino Sans", "Yu Gothic", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+    }
 
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(125,249,255,0.45) 1px, transparent 1px);
+      background-size: 70px 70px, 120px 120px;
+      background-position: 0 0, 35px 55px;
+      opacity: 0.32;
+      pointer-events: none;
+    }
+
+    .panel {
+      position: relative;
+      width: min(820px, 100%);
+      border: 1px solid rgba(125, 249, 255, 0.8);
+      border-radius: 28px;
+      background: rgba(8, 16, 40, 0.82);
+      box-shadow: 0 0 32px rgba(125, 249, 255, 0.28);
+      padding: 46px;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 2px solid rgba(125, 249, 255, 0.35);
+      box-shadow: 0 0 35px rgba(125, 249, 255, 0.2);
+    }
+
+    .label {
+      color: #7df9ff;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(82px, 18vw, 160px);
+      line-height: 0.9;
+      color: #7df9ff;
+      text-shadow: 0 0 18px rgba(125, 249, 255, 0.7);
+    }
+
+    h2 {
+      margin: 14px 0 0;
+      font-size: clamp(28px, 5vw, 48px);
+    }
+
+    p {
+      margin-top: 28px;
+      color: #b9d7e8;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .signal {
+      margin-top: 34px;
+      padding: 18px 20px;
+      border-left: 4px solid #7df9ff;
+      background: rgba(125, 249, 255, 0.08);
+      color: #d9f9ff;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <div class="label">LOST COORDINATE</div>
+
+    <h1>404</h1>
+    <h2>Not Found</h2>
+
+    <p>
+      指定された座標に、ページは存在しませんでした。<br>
+      リクエスト信号は、宇宙のどこかで迷子になったようです。
+    </p>
+
+    <div class="signal">
+      URLの入力ミス、またはページが別の場所へ移動した可能性があります。
+    </div>
+  </main>
+</body>
+</html>
